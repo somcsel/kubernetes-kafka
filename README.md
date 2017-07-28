@@ -11,6 +11,7 @@ How to use:
  * Kafka for real: fork and have a look at [addon](https://github.com/Yolean/kubernetes-kafka/labels/addon)s.
  * Join the discussion in issues and PRs.
 
+
 Why?
 See for yourself, but we think this project gives you better adaptability than [helm](https://github.com/kubernetes/helm) [chart](https://github.com/kubernetes/charts/tree/master/incubator/kafka)s. No single readable readme or template can properly introduce both Kafka and Kubernets.
 Back when we read [Newman](http://samnewman.io/books/building_microservices/) we were beginners with both.
@@ -24,6 +25,12 @@ The goal is to provide [Bootstrap servers](http://kafka.apache.org/documentation
 `
 
 Zookeeper at `zookeeper.kafka.svc.cluster.local:2181`.
+
+## Prepare storage classes
+
+For Minikube run `kubectl create -f configure-minikube/`.
+
+There's a similar setup for GKE, in `configure-gke` of course. You might want to tweak it before creating.
 
 ## Start Zookeeper
 
